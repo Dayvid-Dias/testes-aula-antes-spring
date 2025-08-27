@@ -2,7 +2,7 @@ package SistemaPagamentos;
 
 public class Cartao  implements Pagamento{
     @Override
-    public double pagar(double valor) {
-        return 0;
+    public void pagar(double valor) {
+        System.out.println("Pagamento vai Cartão: R$ " + valor);
     }
 }

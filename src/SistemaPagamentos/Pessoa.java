@@ -8,7 +8,7 @@ public abstract class Pessoa {
         return nome;
     }
 
-    public void setSaldo(double v) {
+    public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
