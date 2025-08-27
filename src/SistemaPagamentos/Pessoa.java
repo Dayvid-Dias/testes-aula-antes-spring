@@ -2,15 +2,28 @@ package SistemaPagamentos;
 
 public abstract class Pessoa {
     private String nome;
+    private double saldo;
 
     public String getNome() {
         return nome;
     }
 
-    public Pessoa(String nome) {
-        this.nome = nome;
+    public void setSaldo(double v) {
+        this.saldo = saldo;
     }
 
-    public abstract double realizarPagamento(double valor);
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public Pessoa(String nome, double saldo) {
+        this.nome = nome;
+        this.saldo = saldo;
+    }
+    public void reduzirSaldo(double valor){
+        setSaldo(getSaldo() - valor);
+    }
+
+    public abstract void realizarPagamento(double valor);
 
 }
