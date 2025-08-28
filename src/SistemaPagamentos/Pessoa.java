@@ -11,7 +11,6 @@ public abstract class Pessoa {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-
     public double getSaldo(){
         return saldo;
     }
@@ -24,6 +23,6 @@ public abstract class Pessoa {
         setSaldo(getSaldo() - valor);
     }
 
-    public abstract void realizarPagamento(double valor);
+    public abstract void realizarPagamento(double valor, Pagamento forma);
 
 }

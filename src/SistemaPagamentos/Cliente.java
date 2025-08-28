@@ -7,10 +7,12 @@ public class Cliente extends Pessoa{
     }
 
     @Override
-    public void realizarPagamento(double valor) {
-        if (getSaldo() >= valor){
+    public void realizarPagamento(double valor, Pagamento forma) {
+        if (getSaldo() >= valor) {
             reduzirSaldo(valor);
-            System.out.printf("%s pago R$ $.2f. Saldo restante: R$ %.2f", getNome(), valor, getSaldo());
+            forma.pagar(valor);
+            System.out.printf("%s pagou R$ %.2f. Saldo restante: R$ %.2f%n",
+                    getNome(), valor, getSaldo());
         } else {
             System.out.println(getNome() + " não tem saldo suficiente para pagar R$ " + valor);
         }
