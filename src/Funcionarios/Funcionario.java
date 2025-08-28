@@ -10,4 +10,6 @@ public abstract class Funcionario {
     }
 
     abstract double calcularBonus();
+
+    abstract void trabalhar();
 }

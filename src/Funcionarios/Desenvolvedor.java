@@ -1,7 +1,6 @@
 package Funcionarios;
 
-public class Desenvolvedor extends Funcionario implements Trabalhavel{
-    double bonus;
+public class Desenvolvedor extends Funcionario {
 
     public Desenvolvedor(String nome, double salario) {
         super(nome, salario);
@@ -9,13 +8,11 @@ public class Desenvolvedor extends Funcionario implements Trabalhavel{
 
     @Override
     double calcularBonus() {
-        bonus = salario * 0.10;
-        System.out.println("Salário com bônus: R$ " + (salario + bonus));
-        return bonus;
+        return salario * 0.10;
     }
 
     @Override
     public void trabalhar() {
-        System.out.println(nome + " está trabalhando!");
+        System.out.println(nome + " está codando um sistema!");
     }
 }

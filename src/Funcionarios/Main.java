@@ -17,10 +17,22 @@ public class Main {
         funcionarios.add(stage);
 
         for (Funcionario funcionario : funcionarios){
+            double bonus = funcionario.calcularBonus();
+
             System.out.printf("""
                     Nome do funcionário: %s
-                    Salário: R$ %.2f
-                    """, funcionario.nome, funcionario.salario);
+                    Salário base: R$ %.2f
+                    Bônus: R$ %.2f
+                    Salário com bônus: R$ %.2f
+                    """,
+                    funcionario.nome,
+                    funcionario.salario,
+                    bonus,
+                    funcionario.salario + bonus
+            );
+
+            funcionario.trabalhar();
+            System.out.println("---------------------");
         }
 
     }
