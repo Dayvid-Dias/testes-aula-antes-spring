@@ -1,11 +1,20 @@
 package SistemaPagamentos;
 
+import java.util.Scanner;
+
 public class main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        Cliente cliente = new Cliente("Jubiscleudo", 5000);
+        System.out.println("Digite o nome do usuário: ");
+        String nome = sc.nextLine();
+        System.out.println("Digite o saldo do usuário: ");
+        double saldo = sc.nextDouble();
 
-        cliente.realizarPagamento(3500, new Boleto());
+        Cliente cliente = new Cliente(nome, saldo);
+        System.out.println("Qual o valor do pagamento?");
+        double valor = sc.nextDouble();
+        cliente.realizarPagamento(valor, new Boleto());
 
     }
 }
