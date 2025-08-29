@@ -19,8 +19,20 @@ public class NotasAlunos {
             }
             mapAlunoNota.put(nome, notas);
         }
-        for (int i = 1; i <= mapAlunoNota.size(); i++) {
-            System.out.println();
+        System.out.println("\nNotas e médias dos alunos:");
+        for (Map.Entry<String, List<Double>> entry : mapAlunoNota.entrySet()) {
+            String nome = entry.getKey();
+            List<Double> notas = entry.getValue();
+
+            // cálculo da média
+            double soma = 0.0;
+            for (Double n : notas) {
+                soma += n;
+            }
+            double media = soma / notas.size();
+
+            System.out.println(nome + " -> " + notas + " | Média: " + media);
         }
+        sc.close();
     }
 }
