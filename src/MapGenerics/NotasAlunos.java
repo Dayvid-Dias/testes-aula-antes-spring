@@ -31,7 +31,7 @@ public class NotasAlunos {
             }
             double media = soma / notas.size();
 
-            System.out.println(nome + " -> " + notas + " | Média: " + media);
+            System.out.printf("Nome: %s - Notas -> %s - Média: %.1f%n", nome, notas, media);
         }
         sc.close();
     }
