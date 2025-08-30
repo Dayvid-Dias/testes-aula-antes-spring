@@ -24,7 +24,6 @@ public class NotasAlunos {
             String nome = entry.getKey();
             List<Double> notas = entry.getValue();
 
-            // cálculo da média
             double soma = 0.0;
             for (Double n : notas) {
                 soma += n;
