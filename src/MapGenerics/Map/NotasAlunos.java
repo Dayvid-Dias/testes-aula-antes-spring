@@ -1,4 +1,4 @@
-package MapGenerics;
+package MapGenerics.Map;
 
 import java.util.*;
 

@@ -1,6 +1,5 @@
-package MapGenerics;
+package MapGenerics.Map;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
