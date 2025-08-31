@@ -9,6 +9,7 @@ public class MetodoGenerico {
     }
 
     public static void main(String[] args) {
-
+        String[] listaNomes = {"felipe", "dayvid","veronica"};
+        MetodoGenerico.imprimirArray(listaNomes);
     }
 }
