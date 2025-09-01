@@ -1,8 +1,5 @@
 package MapGenerics.Generics;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MetodoGenerico {
 
     public static <T> void imprimirArray(T[] array){
