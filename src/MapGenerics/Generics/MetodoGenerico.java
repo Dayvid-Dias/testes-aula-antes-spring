@@ -1,5 +1,8 @@
 package MapGenerics.Generics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MetodoGenerico {
 
     public static <T> void imprimirArray(T[] array){
@@ -10,6 +13,10 @@ public class MetodoGenerico {
 
     public static void main(String[] args) {
         String[] listaNomes = {"felipe", "dayvid","veronica"};
+        Integer[] listaNumeros = {1, 2, 3};
+        Double[] listaDouble = {1.0, 2.0, 3.0};
         MetodoGenerico.imprimirArray(listaNomes);
+        MetodoGenerico.imprimirArray(listaNumeros);
+        MetodoGenerico.imprimirArray(listaDouble);
     }
 }
